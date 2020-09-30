@@ -77,7 +77,7 @@ class _HoverContainerState extends State<HoverContainer> {
   @override
   void initState() {
     if (widget.hoverHeight == null) widget.hoverHeight = widget.height;
-    if (widget.hoverWidth == null) widget.hoverWidth = widget.hoverHeight;
+    if (widget.hoverWidth == null) widget.hoverWidth = widget.width;
     super.initState();
   }
 
