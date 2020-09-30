@@ -1,14 +1,66 @@
 # hovering
 
-A new Flutter package to enable the hover effect on web.
+A new Flutter package to enable the hover effect on Flutter web.
 
-## Getting Started
+## Widgets :
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+### 1. HoverWidget: 
+    simply changes one widget to another on Hover.
+    Also uses on Hover Property.
+### 2. HoverContainer 
+    Hover effect in a Conatainer() Widget
+    
+### 3. HoverCrossFadeWidget
+    Gives a Hover effect with a fade animation.
+    Transition between two widgets.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+## Constructors :
+```dart
+HoverWidget(
+      {Key key,
+      @required this.child,
+      @required this.hoverChild,
+      @required this.onHover});
+```
+```dart
+ HoverCrossFadeWidget({
+    Key key,
+    this.cursor = SystemMouseCursors.basic,
+    @required this.firstChild,
+    @required this.secondChild,
+    @required this.duration,
+    this.alignmentry = Alignment.center,
+    this.firstCurve = Curves.linear,
+    this.reverseDuration,
+    this.secondCurve = Curves.linear,
+    this.sizeCurve = Curves.linear,
+  });
+```
+```dart
+HoverContainer(
+      {Key key,
+      this.alignment,
+      this.hoveraAlignment,
+      this.color,
+      this.hoverColor,
+      this.width,
+      this.hoverWidth,
+      this.height,
+      this.hoverHeight,
+      this.decoration,
+      this.hoverDecoration,
+      this.foregroundDecoration,
+      this.hoverForegroundDecoration,
+      this.child,
+      this.clipBehavior = Clip.none,
+      this.constraints,
+      this.margin,
+      this.hoverMargin,
+      this.padding,
+      this.hoverPadding,
+      this.transform,
+      this.cursor = SystemMouseCursors.basic,
+      this.hoverTransform});
+      
+```
+
