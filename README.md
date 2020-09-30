@@ -1,6 +1,6 @@
 # hovering
 
-A new Flutter package project.
+A new Flutter package to enable the hover effect on web.
 
 ## Getting Started
 
