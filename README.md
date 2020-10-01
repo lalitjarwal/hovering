@@ -22,6 +22,8 @@ A new Flutter package to enable the hover effect on Flutter web.
 ### 4. HoverAnimatedContainer
     Creates a Container widget with an Animation.
     Duration can be provided.
+### 5. HoverButton
+    Creates a Button widget with hover effect.
 
 ## Constructors :
 ```dart
@@ -99,6 +101,46 @@ HoverAnimatedContainer(
       this.cursor = SystemMouseCursors.basic,
       this.hoverTransform});
 ```
+```dart
+HoverButton(
+      {Key key,
+      @required this.onpressed,
+      this.animationDuration,
+      this.autofocus = false,
+      this.child,
+      this.clipBehavior = Clip.none,
+      this.color,
+      this.colorBrightness,
+      this.disabledColor,
+      this.disabledElevation,
+      this.disabledTextColor,
+      this.elevation = 4.0,
+      this.enableFeedback = true,
+      this.focusColor,
+      this.focusElevation,
+      this.focusNode,
+      this.height,
+      this.highlightColor,
+      this.highlightElevation,
+      this.hoverColor,
+      this.hoverElevation = 8.0,
+      this.materialTapTargetSize,
+      this.minWidth,
+      this.mouseCursor = SystemMouseCursors.click,
+      this.onHighlightChanged,
+      this.onLongPress,
+      this.padding,
+      this.hoverPadding = const EdgeInsets.all(2.0),
+      this.shape = const StadiumBorder(),
+      this.splashColor,
+      this.textColor,
+      this.textTheme,
+      this.visualDensity,
+      this.hoverShape,
+      this.hoverTextColor,
+      this.hoverTextTheme,
+      this.hoverColorBrightness});
+
 ## Usage 
 
 ```
