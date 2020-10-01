@@ -1,6 +1,6 @@
 name: hovering
 description: A new Flutter package to enable the hover effect on Flutter web.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/lalitjarwal/hovering
 
 environment:
