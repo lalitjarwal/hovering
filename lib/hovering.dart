@@ -129,7 +129,6 @@ class _HoverContainerState extends State<HoverContainer> {
   }
 }
 
-
 // ignore: must_be_immutable
 class HoverAnimatedContainer extends StatefulWidget {
   /// Creates a `AnimatedContainer `widget that responds to the hover effect on web.
@@ -168,7 +167,7 @@ class HoverAnimatedContainer extends StatefulWidget {
       this.alignment,
       this.hoveraAlignment,
       this.color,
-      this.duration=const Duration(milliseconds:200),
+      this.duration = const Duration(milliseconds: 200),
       this.hoverColor,
       this.width,
       this.hoverWidth,
@@ -185,7 +184,7 @@ class HoverAnimatedContainer extends StatefulWidget {
       this.padding,
       this.hoverPadding,
       this.transform,
-      this.curve=Curves.linear,
+      this.curve = Curves.linear,
       this.cursor = SystemMouseCursors.basic,
       this.hoverTransform})
       : assert(margin == null || margin.isNonNegative),
@@ -209,7 +208,6 @@ class HoverAnimatedContainer extends StatefulWidget {
 }
 
 class _HoverAnimatedContainerState extends State<HoverAnimatedContainer> {
-
   bool _isHover = false;
   @override
   Widget build(BuildContext context) {
