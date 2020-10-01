@@ -2,7 +2,12 @@
 
 A new Flutter package to enable the hover effect on Flutter web.
 
-## Widgets :
+## Intallation :
+```dart 
+    hovering: ^1.0.0
+```
+
+## List of Widgets :
 
 ### 1. HoverWidget: 
     simply changes one widget to another on Hover.
@@ -13,6 +18,9 @@ A new Flutter package to enable the hover effect on Flutter web.
 ### 3. HoverCrossFadeWidget
     Gives a Hover effect with a fade animation.
     Transition between two widgets.
+### 4. HoverAnimatedContainer
+    Creates a Container widget with an Animation.
+    Duration can be provided.
 
 ## Constructors :
 ```dart
@@ -62,5 +70,35 @@ HoverContainer(
       this.cursor = SystemMouseCursors.basic,
       this.hoverTransform});
       
+```
+```dart
+HoverAnimatedContainer(
+      {Key key,
+      this.alignment,
+      this.hoveraAlignment,
+      this.color,
+      this.duration=const Duration(milliseconds:200),
+      this.curve=Curves.linear,
+      this.hoverColor,
+      this.width,
+      this.hoverWidth,
+      this.height,
+      this.hoverHeight,
+      this.decoration,
+      this.hoverDecoration,
+      this.foregroundDecoration,
+      this.hoverForegroundDecoration,
+      this.child,
+      this.constraints,
+      this.margin,
+      this.hoverMargin,
+      this.padding,
+      this.hoverPadding,
+      this.transform,
+      this.cursor = SystemMouseCursors.basic,
+      this.hoverTransform});
+```
+## Usage 
+
 ```
 
