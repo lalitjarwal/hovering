@@ -4,7 +4,8 @@ A new Flutter package to enable the hover effect on Flutter web.
 
 ## Intallation :
 ```dart 
-    hovering: ^1.0.0
+    dependencies:
+        hovering: ^1.0.0
 ```
 
 ## List of Widgets :
