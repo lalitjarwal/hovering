@@ -141,7 +141,5 @@ HoverButton(
       this.hoverTextTheme,
       this.hoverColorBrightness});
 
-## Usage 
-
 ```
 
