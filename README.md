@@ -1,11 +1,19 @@
 # hovering
 
-A new Flutter package to enable the hover effect on Flutter web.
+
+### A new Flutter package to enable the hover effect on Flutter web.
+
+
+<img src="https://raw.githubusercontent.com/lalitjarwal/hovering/master/snaps/hoverGrow.gif"  height = "250" alt="Hover Grow Effect">
+<img src="https://raw.githubusercontent.com/lalitjarwal/hovering/master/snaps/hoverShrink.gif"  height = "250" alt="Hover Shrink Effect">
+<img src="https://raw.githubusercontent.com/lalitjarwal/hovering/master/snaps/hoverFade.gif"  height = "250" alt="Hover Fade Effect">
+<img src="https://raw.githubusercontent.com/lalitjarwal/hovering/master/snaps/hoverButton.gif"  height = "250" alt="Hoverbutton Effect">
+<img src="https://raw.githubusercontent.com/lalitjarwal/hovering/master/snaps/hoverBar.gif"  height = "250" alt="Hover SnackBar Effect">
 
 ## Intallation :
 ```dart 
     dependencies:
-        hovering: ^1.0.0
+        hovering: ^1.0.2
 ```
 
 ## List of Widgets :
@@ -14,7 +22,7 @@ A new Flutter package to enable the hover effect on Flutter web.
     simply changes one widget to another on Hover.
     Also uses on Hover Property.
 ### 2. HoverContainer 
-    Hover effect in a Conatainer() Widget
+    Hover effect in a Conatainer Widget
     
 ### 3. HoverCrossFadeWidget
     Gives a Hover effect with a fade animation.
