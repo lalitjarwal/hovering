@@ -4,40 +4,39 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-// ignore: must_be_immutable
+/// Creates a `Container `widget that responds to the hover effect on web.
+///
+/// The `height` and `width` values include the padding.
+///
+/// The `color` and `decoration` arguments cannot both be supplied, since
+/// it would potentially result in the decoration drawing over the background
+/// color. To supply a decoration with a color, use `decoration:
+/// BoxDecoration(color: color)`.
 class HoverContainer extends StatefulWidget {
-  /// Creates a `Container `widget that responds to the hover effect on web.
-  ///
-  /// The `height` and `width` values include the padding.
-  ///
-  /// The `color` and `decoration` arguments cannot both be supplied, since
-  /// it would potentially result in the decoration drawing over the background
-  /// color. To supply a decoration with a color, use `decoration:
-  /// BoxDecoration(color: color)`.
-  final AlignmentGeometry alignment;
-  final AlignmentGeometry hoveraAlignment;
-  final EdgeInsetsGeometry padding;
-  final EdgeInsetsGeometry hoverPadding;
-  final Color color;
-  final Color hoverColor;
-  final Decoration decoration;
-  final Decoration hoverDecoration;
-  final Decoration foregroundDecoration;
-  final Decoration hoverForegroundDecoration;
-  final double width;
-  double hoverWidth;
-  final double height;
-  double hoverHeight;
-  final BoxConstraints constraints;
-  final EdgeInsetsGeometry margin;
-  final EdgeInsetsGeometry hoverMargin;
-  final Matrix4 transform;
-  final Matrix4 hoverTransform;
-  final Widget child;
+  final AlignmentGeometry? alignment;
+  final AlignmentGeometry? hoveraAlignment;
+  final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry? hoverPadding;
+  final Color? color;
+  final Color? hoverColor;
+  final Decoration? decoration;
+  final Decoration? hoverDecoration;
+  final Decoration? foregroundDecoration;
+  final Decoration? hoverForegroundDecoration;
+  final double? width;
+  final double? hoverWidth;
+  final double? height;
+  final double? hoverHeight;
+  final BoxConstraints? constraints;
+  final EdgeInsetsGeometry? margin;
+  final EdgeInsetsGeometry? hoverMargin;
+  final Matrix4? transform;
+  final Matrix4? hoverTransform;
+  final Widget? child;
   final Clip clipBehavior;
   final MouseCursor cursor;
   HoverContainer(
-      {Key key,
+      {Key? key,
       this.alignment,
       this.hoveraAlignment,
       this.color,
@@ -67,7 +66,6 @@ class HoverContainer extends StatefulWidget {
         assert(decoration == null || decoration.debugAssertIsValid()),
         assert(hoverDecoration == null || hoverDecoration.debugAssertIsValid()),
         assert(constraints == null || constraints.debugAssertIsValid()),
-        assert(clipBehavior != null),
         assert(
             color == null || decoration == null && hoverDecoration == null,
             'Cannot provide both a color and a decoration\n'
@@ -84,8 +82,6 @@ class HoverContainer extends StatefulWidget {
 class _HoverContainerState extends State<HoverContainer> {
   @override
   void initState() {
-    // if (widget.hoverHeight == null) widget.hoverHeight = widget.height;
-    // if (widget.hoverWidth == null) widget.hoverWidth = widget.width;
     super.initState();
   }
 
@@ -129,41 +125,40 @@ class _HoverContainerState extends State<HoverContainer> {
   }
 }
 
-// ignore: must_be_immutable
+/// Creates a `AnimatedContainer `widget that responds to the hover effect on web.
+///
+/// The `height` and `width` values include the padding.
+///
+/// The `color` and `decoration` arguments cannot both be supplied, since
+/// it would potentially result in the decoration drawing over the background
+/// color. To supply a decoration with a color, use `decoration:
+/// BoxDecoration(color: color)`.
 class HoverAnimatedContainer extends StatefulWidget {
-  /// Creates a `AnimatedContainer `widget that responds to the hover effect on web.
-  ///
-  /// The `height` and `width` values include the padding.
-  ///
-  /// The `color` and `decoration` arguments cannot both be supplied, since
-  /// it would potentially result in the decoration drawing over the background
-  /// color. To supply a decoration with a color, use `decoration:
-  /// BoxDecoration(color: color)`.
-  final AlignmentGeometry alignment;
-  final AlignmentGeometry hoveraAlignment;
-  final EdgeInsetsGeometry padding;
-  final EdgeInsetsGeometry hoverPadding;
-  final Color color;
-  final Color hoverColor;
-  final Decoration decoration;
-  final Decoration hoverDecoration;
-  final Decoration foregroundDecoration;
-  final Decoration hoverForegroundDecoration;
-  final double width;
-  double hoverWidth;
-  final double height;
-  double hoverHeight;
-  final BoxConstraints constraints;
-  final EdgeInsetsGeometry margin;
-  final EdgeInsetsGeometry hoverMargin;
-  final Matrix4 transform;
-  final Matrix4 hoverTransform;
-  final Widget child;
+  final AlignmentGeometry? alignment;
+  final AlignmentGeometry? hoveraAlignment;
+  final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry? hoverPadding;
+  final Color? color;
+  final Color? hoverColor;
+  final Decoration? decoration;
+  final Decoration? hoverDecoration;
+  final Decoration? foregroundDecoration;
+  final Decoration? hoverForegroundDecoration;
+  final double? width;
+  final double? hoverWidth;
+  final double? height;
+  final double? hoverHeight;
+  final BoxConstraints? constraints;
+  final EdgeInsetsGeometry? margin;
+  final EdgeInsetsGeometry? hoverMargin;
+  final Matrix4? transform;
+  final Matrix4? hoverTransform;
+  final Widget? child;
   final Duration duration;
   final Curve curve;
   final MouseCursor cursor;
   HoverAnimatedContainer(
-      {Key key,
+      {Key? key,
       this.alignment,
       this.hoveraAlignment,
       this.color,
@@ -249,14 +244,14 @@ class _HoverAnimatedContainerState extends State<HoverAnimatedContainer> {
   }
 }
 
+/// Creates a cross-fade animation hover widget.
+///
+/// The [duration] of the animation is the same for all components (fade in,
+/// fade out, and size), and you can pass [Interval]s instead of [Curve]s in
+/// order to have finer control, e.g., creating an overlap between the fades.
+///
+/// All the arguments other than [key] must be non-null.
 class HoverCrossFadeWidget extends StatefulWidget {
-  /// Creates a cross-fade animation hover widget.
-  ///
-  /// The [duration] of the animation is the same for all components (fade in,
-  /// fade out, and size), and you can pass [Interval]s instead of [Curve]s in
-  /// order to have finer control, e.g., creating an overlap between the fades.
-  ///
-  /// All the arguments other than [key] must be non-null.
   final MouseCursor cursor;
   final Widget firstChild;
   final Widget secondChild;
@@ -264,23 +259,21 @@ class HoverCrossFadeWidget extends StatefulWidget {
   final Curve firstCurve;
   final Curve secondCurve;
   final Curve sizeCurve;
-  final Duration reverseDuration;
+  final Duration? reverseDuration;
   final AlignmentGeometry alignmentry;
 
   HoverCrossFadeWidget({
-    Key key,
+    Key? key,
     this.cursor = SystemMouseCursors.basic,
-    @required this.firstChild,
-    @required this.secondChild,
-    @required this.duration,
+    required this.firstChild,
+    required this.secondChild,
+    required this.duration,
     this.alignmentry = Alignment.center,
     this.firstCurve = Curves.linear,
     this.reverseDuration,
     this.secondCurve = Curves.linear,
     this.sizeCurve = Curves.linear,
-  })  : assert(firstChild != null && secondChild != null && duration != null,
-            'These are required fields.'),
-        super(key: key);
+  }) : super(key: key);
 
   @override
   _HoverCrossFadeWidgetState createState() => _HoverCrossFadeWidgetState();
@@ -323,12 +316,11 @@ class HoverWidget extends StatefulWidget {
   final Widget hoverChild;
   final Function(PointerEnterEvent event) onHover;
   HoverWidget(
-      {Key key,
-      @required this.child,
-      @required this.hoverChild,
-      @required this.onHover})
-      : assert(child != null && hoverChild != null && onHover != null),
-        super(key: key);
+      {Key? key,
+      required this.child,
+      required this.hoverChild,
+      required this.onHover})
+      : super(key: key);
 
   @override
   _HoverWidgetState createState() => _HoverWidgetState();
@@ -360,47 +352,47 @@ class _HoverWidgetState extends State<HoverWidget> {
   }
 }
 
+/// Creates a material button with Hover Effect.
 class HoverButton extends StatefulWidget {
-  /// Creates a material button with Hover Effect.
   final VoidCallback onpressed;
-  final VoidCallback onLongPress;
-  final ValueChanged<bool> onHighlightChanged;
+  final VoidCallback? onLongPress;
+  final ValueChanged<bool>? onHighlightChanged;
   final MouseCursor mouseCursor;
-  final ButtonTextTheme textTheme;
-  final ButtonTextTheme hoverTextTheme;
-  final Color textColor;
-  final Color hoverTextColor;
-  final Color disabledTextColor;
-  final Color color;
-  final Color disabledColor;
-  final Color focusColor;
-  final Color hoverColor;
-  final Color highlightColor;
-  final Color splashColor;
-  final Brightness colorBrightness;
-  final Brightness hoverColorBrightness;
+  final ButtonTextTheme? textTheme;
+  final ButtonTextTheme? hoverTextTheme;
+  final Color? textColor;
+  final Color? hoverTextColor;
+  final Color? disabledTextColor;
+  final Color? color;
+  final Color? disabledColor;
+  final Color? focusColor;
+  final Color? hoverColor;
+  final Color? highlightColor;
+  final Color? splashColor;
+  final Brightness? colorBrightness;
+  final Brightness? hoverColorBrightness;
   final double elevation;
-  final double focusElevation;
+  final double? focusElevation;
   final double hoverElevation;
-  final double highlightElevation;
-  final double disabledElevation;
-  final EdgeInsetsGeometry padding;
+  final double? highlightElevation;
+  final double? disabledElevation;
+  final EdgeInsetsGeometry? padding;
   final EdgeInsetsGeometry hoverPadding;
-  final VisualDensity visualDensity;
+  final VisualDensity? visualDensity;
   final ShapeBorder shape;
-  final ShapeBorder hoverShape;
+  final ShapeBorder? hoverShape;
   final Clip clipBehavior;
-  final FocusNode focusNode;
+  final FocusNode? focusNode;
   final bool autofocus;
-  final MaterialTapTargetSize materialTapTargetSize;
-  final Duration animationDuration;
-  final double minWidth;
-  final double height;
+  final MaterialTapTargetSize? materialTapTargetSize;
+  final Duration? animationDuration;
+  final double? minWidth;
+  final double? height;
   final bool enableFeedback;
-  final Widget child;
+  final Widget? child;
   HoverButton(
-      {Key key,
-      @required this.onpressed,
+      {Key? key,
+      required this.onpressed,
       this.animationDuration,
       this.autofocus = false,
       this.child,
@@ -495,8 +487,7 @@ class _HoverButtonState extends State<HoverButton> {
         visualDensity: widget.visualDensity,
         focusNode: widget.focusNode,
         height: widget.height,
-        padding:
-            _isHover ? widget.hoverPadding ?? widget.padding : widget.padding,
+        padding: _isHover ? widget.hoverPadding : widget.padding,
       ),
     );
   }

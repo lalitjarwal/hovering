@@ -1,3 +1,6 @@
+## [1.0.3] 
+
+Migrated to null safety
 ## [1.0.2] 
 
 *Updated Readme
