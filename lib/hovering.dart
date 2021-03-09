@@ -120,6 +120,7 @@ class _HoverContainerState extends State<HoverContainer> {
         clipBehavior: widget.clipBehavior,
         constraints: widget.constraints,
         child: widget.child,
+        margin: _isHover ? widget.hoverMargin ?? widget.margin : widget.margin,
       ),
     );
   }
@@ -239,6 +240,7 @@ class _HoverAnimatedContainerState extends State<HoverAnimatedContainer> {
         duration: widget.duration,
         curve: widget.curve,
         child: widget.child,
+        margin: _isHover ? widget.hoverMargin ?? widget.margin : widget.margin,
       ),
     );
   }
