@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class HoverWidget extends StatefulWidget {
   final Widget child;
   final Widget hoverChild;
-  final void Function (PointerEnterEvent event) onHover;
+  final void Function(PointerEnterEvent event) onHover;
   HoverWidget(
       {Key? key,
       required this.child,
