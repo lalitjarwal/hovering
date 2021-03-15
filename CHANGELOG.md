@@ -1,3 +1,6 @@
+## [1.0.4] 
+
+*Bug Fix*
 ## [1.0.3] 
 
 Migrated to null safety
