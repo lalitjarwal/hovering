@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 
 /// Creates a material button with Hover Effect.
 class HoverButton extends StatefulWidget {
-  final VoidCallback onpressed;
+  final VoidCallback onPressed;
   final VoidCallback? onLongPress;
   final ValueChanged<bool>? onHighlightChanged;
   final MouseCursor mouseCursor;
